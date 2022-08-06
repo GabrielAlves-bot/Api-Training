@@ -1,9 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql:us-cdbr-east-06.cleardb.net/heroku_e12d616a2260777?useTimezone=true&serverTimezone=UTC
-    username: b1e8c8b6b9add5
-    password: 4e976b16
+    url: mysql://b1e8c8b6b9add5:4e976b16@us-cdbr-east-06.cleardb.net/heroku_e12d616a2260777?reconnect=true
   jpa:
     hibernate:
       ddl-auto: update
