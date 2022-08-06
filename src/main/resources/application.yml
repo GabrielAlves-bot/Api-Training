@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/banco_api?useTimezone=true&serverTimezone=UTC
-    username: root
-    password: password
+    url: jdbc:mysql:us-cdbr-east-06.cleardb.net/heroku_e12d616a2260777?useTimezone=true&serverTimezone=UTC
+    username: b1e8c8b6b9add5
+    password: 4e976b16
   jpa:
     hibernate:
       ddl-auto: update
