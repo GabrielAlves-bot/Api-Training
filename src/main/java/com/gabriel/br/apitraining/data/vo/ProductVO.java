@@ -3,33 +3,20 @@ package com.gabriel.br.apitraining.data.vo;
 import java.io.Serializable;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-
-@JsonAutoDetect(fieldVisibility=JsonAutoDetect.Visibility.ANY, getterVisibility=JsonAutoDetect.Visibility.NONE,
-setterVisibility=JsonAutoDetect.Visibility.NONE, creatorVisibility=JsonAutoDetect.Visibility.NONE)
-@JsonPropertyOrder({"Product_Id","Product_Name","Product_Description","Product_Price","Product_Color","Product_Size"})
 public class ProductVO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
-	@JsonProperty("Product_Id")
 	private long ProductId;
 	
-	@JsonProperty("Product_Name")
 	private String ProductName;
 	
-	@JsonProperty("Product_Description")
 	private String ProductDescription;
 	
-	@JsonProperty("Product_Price")
 	private Double ProductPrice;
 	
-	@JsonProperty("Product_Color")
 	private String ProductColor;
 	
-	@JsonProperty("Product_Size")
 	private String ProductSize;
 	
 	public ProductVO() {
