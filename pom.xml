@@ -15,12 +15,31 @@
 	<description>This is my first API</description>
 	<properties>
 		<java.version>18</java.version>
+		<dozer.version>6.4.0</dozer.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.github.dozermapper</groupId>
+		    <artifactId>dozer-core</artifactId>
+		    <version>${dozer.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>javax.xml.bind</groupId>
+		    <artifactId>jaxb-api</artifactId>
+		    <version>2.1</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

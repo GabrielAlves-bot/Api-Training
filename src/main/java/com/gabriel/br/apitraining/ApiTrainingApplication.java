@@ -10,4 +10,5 @@ public class ApiTrainingApplication {
 		SpringApplication.run(ApiTrainingApplication.class, args);
 	}
 
+	
 }
