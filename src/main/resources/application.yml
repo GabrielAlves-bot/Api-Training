@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${JDBC_DATASOURCE_URL}
+    url: JDBC:mysql://b00b37f7745c47:254b2cff@us-cdbr-east-06.cleardb.net/heroku_5a92301a5819bca?reconnect=true
   jpa:
     hibernate:
       ddl-auto: update
