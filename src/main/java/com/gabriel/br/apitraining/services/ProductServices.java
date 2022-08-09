@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gabriel.br.apitraining.data.vo.ProductVO;
+import com.gabriel.br.apitraining.exceptions.ResourceNotFoundException;
 import com.gabriel.br.apitraining.mapper.DozerMapper;
 import com.gabriel.br.apitraining.model.Product;
 import com.gabriel.br.apitraining.repository.ProductRepository;
@@ -30,5 +31,25 @@ public class ProductServices {
 		logger.info("Finding All Products");
 		return DozerMapper.parseListObjects(repository.findAll(), ProductVO.class) ;
 	}
-
+	
+	
+	public ProductVO findById(Long id){
+		logger.info("Finding A Products");
+		var entity = repository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("No records found for this ID!"));
+		return DozerMapper.parseObject(entity, ProductVO.class);
+	}
+	
+	public void delete(Long id) {
+		
+		logger.info("Deleting one person!");
+		
+		var entity = repository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("No records found for this ID!"));
+		repository.delete(entity);
+	}
+	
+	
+	
 }
+	

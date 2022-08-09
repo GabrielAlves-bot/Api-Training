@@ -48,6 +48,8 @@ public class Product implements Serializable {
 		ProductSize = productSize;
 	}
 	
+	
+
 	public long getProductId() {
 		return ProductId;
 	}
