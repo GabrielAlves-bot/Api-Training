@@ -49,6 +49,21 @@ public class ProductServices {
 		repository.delete(entity);
 	}
 	
+	public ProductVO update(ProductVO product) {
+		var entity = repository.findById(product.getProductId())
+				.orElseThrow(() -> new ResourceNotFoundException("No records found for this ID!"));
+		
+		entity.setProductName(product.getProductName());
+		entity.setProductDescription(product.getProductDescription());
+		entity.setProductColor(product.getProductColor());
+		entity.setProductPrice(product.getProductPrice());
+		entity.setProductSize(product.getProductSize());
+		
+		var vo = DozerMapper.parseObject(repository.save(entity), ProductVO.class);
+		
+		return vo;
+	}
+	
 	
 	
 }
